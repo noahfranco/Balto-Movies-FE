@@ -28,3 +28,7 @@ To get the server running locally:
 - Axios
 - React Router Dom
 - Rsuite
+
+## Documentation
+
+See [Backend Documentation](https://github.com/noahfranco/Balto-Movies-BE) for details on the backend of the project.
