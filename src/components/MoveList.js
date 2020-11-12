@@ -1,10 +1,11 @@
-import React, {useEffect, useContext} from "react"
+import React, {useEffect, useContext, useState} from "react"
 import axios from "axios"
-import MoveCard from "./MoveCard"
+import MovieCard from "./MoveCard"
 // context to allow us to pass up and down the DOM tree
 import MoveListContext from "../context/MoveListContext"
 
 const MoveList = () => {
+    const [searchBar, setSearchBar] = useState("")
     const {moveList, setMoveList} = useContext(MoveListContext)
 
     useEffect(() => {
@@ -18,15 +19,31 @@ const MoveList = () => {
         }, [])
     }, [])
 
-    console.log("moveList: ", moveList)
+    const handleSearch = (event) => {
+        setSearchBar(event.target.value)
+    }
+
+    const filterSearch = moveList.filter((movies) =>
+    movies.title.toLowerCase().includes(searchBar.toLowerCase())
+)
 
     return (
         <>
-        <h3> View now </h3>
-         {/* mapp through satae */}
-         {moveList.map((event) => (
-             <MoveCard release_year={event.release_year} title={event.title} origin={event.origin} director={event.director} cast={event.cast} genre={event.genre} wiki_page={event.wiki_page} plot={event.plot} />
-         ))}
+        <div>
+        <form>
+                <input 
+                    type="text"
+                    placeholder="Search Movie Titles"
+                    value={searchBar}
+                    onChange={handleSearch}
+                />    
+            </form> 
+        </div>
+            {filterSearch.map((movie) => {
+                return (
+                    <MovieCard release_year={movie.release_year} title={movie.title} origin={movie.origin} director={movie.director} cast={movie.cast} genre={movie.genre} wiki_page={movie.wiki_page} plot={movie.plot} />
+                )
+            })}
         </>
     )
 }

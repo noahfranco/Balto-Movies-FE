@@ -1,13 +1,15 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
+import axios from "axios"
 
 const MoveCard = (props) => {
+    // props is passing state from MoveList component 
    console.log("props from MoveCard: ", props) 
 
    return (
        <>
         <h1> {props.title} </h1>
        <div>
-            <p> Release Year: {props.release_year}  </p>
+            <p> Release Year: {props.release_year} </p>
             <p> Origin: {props.origin} </p>
             <p> Director: {props.director} </p>
             <p> Cast: {props.cast} </p>
