@@ -1,8 +1,8 @@
 import React, {useEffect, useContext, useState} from "react"
 import axios from "axios"
-import MovieCard from "./MoveCard"
+import MovieCard from "./MovieCard"
 // context to allow us to pass up and down the DOM tree
-import MoveListContext from "../context/MoveListContext"
+import MoveListContext from "../context/MovieListContext"
 
 const MoveList = () => {
     const [searchBar, setSearchBar] = useState("")
