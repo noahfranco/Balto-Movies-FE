@@ -6,9 +6,6 @@ import AddNewMovieContext from "../context/AddNewMovieContext"
 const AddNewMovie = (props) => {
     const {addNewMovie, setAddNewMovie} = useContext(AddNewMovieContext)
 
-    console.log("props in AddNewMovie: ", addNewMovie)
-
-    
     // localhost endpoint: http://localhost:4000/api/movies/post
     // production endpoint: https://tranquil-meadow-07587.herokuapp.com/api/movies/post
     const submitHandler = (event) => {
@@ -16,8 +13,6 @@ const AddNewMovie = (props) => {
         axios
         .post("https://tranquil-meadow-07587.herokuapp.com/api/movies/post", addNewMovie)
         .then((res) => {
-            console.log("hit me")
-            console.log({res})
             setAddNewMovie(res.data)
             props.history.push("/")
         }) .catch((error) => {

@@ -8,14 +8,13 @@ const MoveList = () => {
     const [searchBar, setSearchBar] = useState("")
     const {moveList, setMoveList} = useContext(MoveListContext)
 
-    
+
     // localhost endpoint: http://localhost:4000/api/movies/get
     // production endpoint: https://tranquil-meadow-07587.herokuapp.com/
     useEffect(() => {
         axios
         .get("https://tranquil-meadow-07587.herokuapp.com/api/movies/get")
         .then((res) => {
-            // console.log({res})
             setMoveList(res.data)
         }) .catch((error) => {
            console.log({error}) 

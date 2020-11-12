@@ -2,7 +2,7 @@ import React from "react"
 import axios from "axios"
 
 const MoveCard = (props) => {
-    // props is passing state from MoveList component 
+    // props is passing state from MovieList component 
    console.log("props from MoveCard: ", props) 
 
    return (
