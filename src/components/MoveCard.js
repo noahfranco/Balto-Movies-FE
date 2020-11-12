@@ -7,7 +7,7 @@ const MoveCard = (props) => {
        <>
         <h1> {props.title} </h1>
        <div>
-            <p> Release Year: {props.release_year}  </p>
+            <p> Release Year: {props.release_year} </p>
             <p> Origin: {props.origin} </p>
             <p> Director: {props.director} </p>
             <p> Cast: {props.cast} </p>

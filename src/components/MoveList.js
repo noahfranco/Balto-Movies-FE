@@ -18,8 +18,6 @@ const MoveList = () => {
         }, [])
     }, [])
 
-    console.log("moveList: ", moveList)
-
     return (
         <>
         <h3> View now </h3>
