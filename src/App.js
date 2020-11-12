@@ -1,9 +1,32 @@
 import './App.css';
+import React, {useState} from "react"
+import {Route, Switch} from "react-router-dom"
+import MoveList from "./components/MoveList"
+// context to allow us to pass up and down the DOM tree
+import MoveListContext from "./context/MoveListContext"
+import MoveCard from './components/MoveCard';
 
-function App() {
+const App = () => {
+  const [moveList, setMoveList] = useState([{
+    release_year: "",
+    title: "",
+    origin: "",
+    director: "",
+    cast: "",
+    genre: "",
+    wiki_page: "",
+    plot: ""
+}])
+
+
   return (
     <div className="App">
       <h4> Welcome to Balto Movie Application </h4>
+      <Switch> 
+        <MoveListContext.Provider value={{moveList, setMoveList}}>
+        <Route exact path="/" component={MoveList} />
+        </MoveListContext.Provider>
+      </Switch>
     </div>
   );
 }
