@@ -2,7 +2,7 @@
 
 [Trello Board](https://trello.com/b/tXisUcW0/balto-movie-app)
 
-#### Front end deployed to [Vercel](https://balto-movies-project-on8qy0l2c.vercel.app/).
+#### Front end deployed to [Vercel](https://balto-movies-project.vercel.app/).
 
 # Installation Instructions
 
