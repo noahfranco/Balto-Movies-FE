@@ -8,10 +8,13 @@ const AddNewMovie = (props) => {
 
     console.log("props in AddNewMovie: ", addNewMovie)
 
+    
+    // localhost endpoint: http://localhost:4000/api/movies/post
+    // production endpoint: https://tranquil-meadow-07587.herokuapp.com/api/movies/post
     const submitHandler = (event) => {
         event.preventDefault()
         axios
-        .post("http://localhost:4000/api/movies/post", addNewMovie)
+        .post("https://tranquil-meadow-07587.herokuapp.com/api/movies/post", addNewMovie)
         .then((res) => {
             console.log("hit me")
             console.log({res})
