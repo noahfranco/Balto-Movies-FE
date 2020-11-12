@@ -3,8 +3,6 @@ import axios from "axios"
 import MoveCard from "./MoveCard"
 // context to allow us to pass up and down the DOM tree
 import MoveListContext from "../context/MoveListContext"
-// import {connect} from "react-redux"
-// import { getMoviesActions } from "../redux/actions/GetMoviesActions"
 
 const MoveList = () => {
     const {moveList, setMoveList} = useContext(MoveListContext)
@@ -34,29 +32,3 @@ const MoveList = () => {
 }
 
 export default MoveList
-
-
-// class MoveList extends React.Component {
-   
-//      // render state at DOM
-//     componentDidMount() {
-//         this.props.getMoviesActions()
-//         console.log("movie state from store", this.props.movies)
-//     }
-
-//     render() {
-//         return (
-//             <>
-//                 <h3> Move our list of movies </h3> 
-//             </>
-//         )
-//     }   
-// }
-
-// const mapStateToProps = state => {
-//     return {
-//         movies: state.movies
-//     }
-// }
-
-// export default connect(mapStateToProps, {getMoviesActions})(MoveList)
