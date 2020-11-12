@@ -4,7 +4,7 @@ import {Route, Switch} from "react-router-dom"
 import MoveList from "./components/MoveList"
 // context to allow us to pass up and down the DOM tree
 import MoveListContext from "./context/MoveListContext"
-import MoveCard from './components/MoveCard';
+import NavBar from "./components/NavBar"
 
 const App = () => {
   const [moveList, setMoveList] = useState([{
@@ -21,6 +21,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <NavBar />
       <h4> Welcome to Balto Movie Application </h4>
       <Switch> 
         <MoveListContext.Provider value={{moveList, setMoveList}}>
