@@ -12,9 +12,9 @@ const NavBar = ({ onSelect, activeKey, ...props }) => {
         <Navbar.Body>
             <Nav onSelect={onSelect} activeKey={activeKey}>
             <Nav.Item eventKey="1" icon={<Icon icon="home" />}>
-            <a href="https://tranquil-meadow-07587.herokuapp.com/"> Home </a>
+            <a href="https://balto-movies-project.vercel.app/"> Home </a>
             </Nav.Item>
-            <Nav.Item eventKey="2"> <a href="https://tranquil-meadow-07587.herokuapp.com/newmovie"> Add Movie </a> </Nav.Item>
+            <Nav.Item eventKey="2"> <a href="https://balto-movies-project.vercel.app/newmovie"> Add Movie </a> </Nav.Item>
             </Nav>
         </Navbar.Body>
         </Navbar>
