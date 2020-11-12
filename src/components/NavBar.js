@@ -4,6 +4,8 @@ import 'rsuite/dist/styles/rsuite-default.css'
 
 const NavBar = ({ onSelect, activeKey, ...props }) => {
 
+
+
     return (
     <>
         <Navbar {...props}>
@@ -13,7 +15,6 @@ const NavBar = ({ onSelect, activeKey, ...props }) => {
             <a href="http://localhost:3000/"> Home </a>
             </Nav.Item>
             <Nav.Item eventKey="2"> <a href="http://localhost:3000/newmovie"> Add Movie </a> </Nav.Item>
-            <Nav.Item eventKey="3">Products</Nav.Item>
             </Nav>
         </Navbar.Body>
         </Navbar>

@@ -39,7 +39,9 @@ const [addNewMovie, setAddNewMovie] = useState({
   return (
     <div className="App">
       <NavBar />
+      
       <h4> Welcome to Balto Movie Application </h4>
+
       <Switch> 
         <MoveListContext.Provider value={{moveList, setMoveList}}>
         <Route exact path="/" component={MoveList} />
